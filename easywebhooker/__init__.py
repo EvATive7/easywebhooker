@@ -6,7 +6,7 @@ from requests import Response
 import json
 import requests
 
-logger = Logger('webhooker')
+logger = Logger('easywebhooker')
 
 
 @dataclass
@@ -36,16 +36,16 @@ class HookConfig:
         return hash(json.dumps(asdict(self)))
 
 
-WebhookerConfigType = list[Union[dict, HookConfig]]
-config: WebhookerConfigType = None
+ConfigType = list[Union[dict, HookConfig]]
+config: ConfigType = None
 
 
-def configure(_config: WebhookerConfigType):
+def configure(_config: ConfigType):
     global config
     config = _config
 
 
-def webhook(now = '', _config: WebhookerConfigType = [], **kwargs) -> dict[HookConfig, Response]:
+def webhook(now = '', _config: ConfigType = [], **kwargs) -> dict[HookConfig, Response]:
     global config
     current_config = config if config else _config
 

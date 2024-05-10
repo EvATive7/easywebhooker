@@ -1,4 +1,4 @@
-from webhooker import *
+from easywebhooker import *
 import yaml
 
 import logging

@@ -1,4 +1,4 @@
-# webhooker
+# easywebhooker
 A python library that easily to execute webhooks.
 
 ## usage & example

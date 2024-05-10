@@ -4,13 +4,13 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="webhooker",
+    name="easywebhooker",
     version="0.0.1",
     author="EvATive7",
     author_email="",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/EvATive7/webhooker",
+    url="https://github.com/EvATive7/easywebhooker",
     packages=setuptools.find_packages(),
     install_requires=[],
     entry_points={
