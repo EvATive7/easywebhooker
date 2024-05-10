@@ -1,0 +1,32 @@
+webhook:
+  - when: 'finished'
+    method: POST
+    url: http://127.0.0.1:9888/webhook/f6aca3f7dc074d8c882184c71be3899d
+    body: >
+      {
+        'me': 'service0001',
+        'content': content
+      }
+    headers: 
+      Content-Type: 'application/json'
+  - method: POST
+    url: http://127.0.0.1:9888/webhook/f6aca3f7dc074d8c882184c71be3899d
+    body: >
+      {
+        'me': 'service0001',
+        'content': content
+      }
+    headers: 
+      Content-Type: 'application/json'
+  - when:
+      - start
+      - closing
+    method: POST
+    url: http://127.0.0.1:9888/webhook/f6aca3f7dc074d8c882184c71be3899d
+    body: >
+      {
+        'me': 'service0001',
+        'content': content
+      }
+    headers: 
+      Content-Type: 'application/json'
