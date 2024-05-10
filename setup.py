@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="easywebhooker",
-    version="0.0.1",
+    version="0.0.2",
     author="EvATive7",
     author_email="",
     long_description=long_description,
